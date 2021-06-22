@@ -7,7 +7,7 @@ import jinja2
 
 app = Flask(__name__)
 
-@app.route('/details', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def sendDetails():
     if request.method == 'POST':
         handles = [handle.strip() for handle in request.form["handles"].split(',')]
