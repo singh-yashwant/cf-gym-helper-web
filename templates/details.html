@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fill problem details</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body{
+        background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+        background: linear-gradient(to right, #25c481, #25b7c4);
+        font-family: 'Roboto', sans-serif
+      }
+      div, form, input, select, p { 
+      padding: 0;
+      margin: 10px;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 16px;
+      color: rgb(102, 102, 102);
+      line-height: 22px;
+      }
+     
+      h1 {
+      margin: 15px 0;
+      font-weight: 400;
+      color: #000;
+      }
+      h4 {
+      margin-bottom: 4px;
+      }
+      .main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      form {
+      width: 90%;
+      padding: 20px;
+      }
+      input, select{
+      width: 100%;
+      margin-bottom: 10px;
+      border: 2px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      input:hover, textarea:hover, select:hover {
+      outline: none;
+      border: 1px solid #095484;
+      }
+      select {
+      padding: 7px 0;
+      background: transparent;
+      }
+      .problems-input,.handles-input {
+      display: flex;
+      flex-wrap: wrap;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      -webkit-border-radius: 5px; 
+      -moz-border-radius: 5px; 
+      border-radius: 5px; 
+      background-color: #095484;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background-color: #0666a3;
+      }
+      input {
+      width: calc(35% - 20px);
+      margin: 5px;
+      padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <form method="POST">
+        <h1>CF-Gym-Helper</h1>
+        <p>Get a list of problems unsolved by all the participants for an effective codeforces gym contest</p>
+        <p>Fill the details of unique unsolved problems required, if you need less leave other fields empty. Since the api needs 
+          to do a lot of computations and calls hence the ouput will be delayed.
+        </p>
+        <hr/>
+         <div>
+          <p>Problems</p>
+          <div class="problems-input">
+
+            <!-- {% for n in range(7) %}
+            <input type="number" name="problem1-rating" placeholder="Rating">
+            <input type="number" name="problem1-count" placeholder="No. of problems">
+            {% endfor %}   -->
+
+            <input type="number" name="problem1-rating" placeholder="Rating">
+            <input type="number" name="problem1-count" placeholder="No. of problems">
+
+            <input type="number" name="problem2-rating" placeholder="Rating">
+            <input type="number" name="problem2-count" placeholder="No. of problems">
+
+            <input type="number" name="problem3-rating" placeholder="Rating">
+            <input type="number" name="problem3-count" placeholder="No. of problems">
+
+            <input type="number" name="problem4-rating" placeholder="Rating">
+            <input type="number" name="problem4-count" placeholder="No. of problems">
+
+            <input type="number" name="problem5-rating" placeholder="Rating">
+            <input type="number" name="problem5-count" placeholder="No. of problems">
+
+            <input type="number" name="problem6-rating" placeholder="Rating">
+            <input type="number" name="problem6-count" placeholder="No. of problems">
+
+            <input type="number" name="problem7-rating" placeholder="Rating">
+            <input type="number" name="problem7-count" placeholder="No. of problems">
+
+            <input type="number" name="problem8-rating" placeholder="Rating">
+            <input type="number" name="problem8-count" placeholder="No. of problems">
+
+            <input type="number" name="problem9-rating" placeholder="Rating">
+            <input type="number" name="problem9-count" placeholder="No. of problems">
+
+          </div>
+        </div>
+        <br>
+        <div>
+          <p>List of handles you want to get unsolved problems for (comma seprated)</p>
+          <div class="handles-input">
+            <input type="textarea" name="handles" placeholder="yashwant_singh, 0xero7"></input>
+          </div>
+        </div>
+          <div class="buttonHolder" style="text-align: center; margin: 20px;">
+            <button type="submit" href="/">Send</button>
+          </div>
+          </form>
+    </div>
+  </body>
+</html>
