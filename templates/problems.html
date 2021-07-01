@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Problems</title>
         <style>
+            a{
+            color: #fff;
+            text-decoration: none;
+            }
             h1{
             font-size: 30px;
             color: #fff;
@@ -123,7 +127,7 @@
                     {% for row in data %}
                         <tr>
                             <td>{{ row[0] }}</td>
-                            <td><a>{{ row[1] }}</a></td>
+                            <td><a href= {{row[1]}}>{{ row[1] }}</a></td>
                         </tr>
                     {% endfor %}
                 </tbody>
